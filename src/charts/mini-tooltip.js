@@ -401,6 +401,19 @@ define(function(require){
             return this;
         };
 
+        /**
+         * Gets or Sets the value format of the tooltip
+         * @param  {d3Format.format('.2f'|'d')} _x Desired format
+         * @public
+         */
+        exports.valueFormat = function(_x) {
+            if (!arguments.length) {
+                return tooltipValueFormat;
+            }
+            tooltipValueFormat = _x;
+            return this;
+        };
+
         return exports;
     };
 });
